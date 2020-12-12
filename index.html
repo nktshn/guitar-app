@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTR App</title>
+    <link rel="shortcut icon"
+        href="https://i.pinimg.com/736x/6a/2f/67/6a2f67c1823fe82035f53db68fe27666--tongue-emoji-eyes-emoji.jpg"
+        type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="neck-wrap">
+        <div class="neck"></div>
+    </div>
+    <div class="control-panel">
+        <div class="block">
+            <button onclick="tuneNeck(1)">Tune up</button>
+            <button onclick="tuneNeck(-1)">Tune down</button>
+        </div>
+        <div class="block">
+            <select onchange="handleRootNoteSelect(this.value)" id="rootNoteSelect">
+                <option value="">None</option>
+            </select>
+            <select onchange="handleScaleSelect(this.value)" id="scaleSelect">
+                <option value="">None</option>
+            </select>
+            <button onclick="clearRootAndScaleSelection()">Clear</button>
+        </div>
+        <div class="block">
+            <select onchange="handleGuitarSelect(this.value)" id="guitarSelect">
+            </select>
+        </div>
+    </div>
+</body>
+<script src="./main.js"></script>
+
+</html>
